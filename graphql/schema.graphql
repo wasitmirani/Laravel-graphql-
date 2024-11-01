@@ -11,7 +11,6 @@ type Query {
       "Search by email address."
       email: String @eq @rules(apply: ["prohibits:id", "required_without:id", "email"])
     ): User @find
-
     "List multiple users."
     users(
       "Filters by name. Accepts SQL LIKE wildcards `%` and `_`."
